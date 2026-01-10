@@ -1,6 +1,6 @@
-# Ashokkumar LoginAsCustomer Module
+# Magento 2 LoginAsCustomer Module
 
-## 📦 Module Overview
+## Module Overview
 
 A secure Magento 2 extension that allows authorized Admin users to log in as customers from the Admin Panel with **multi-website support** and full audit traceability.
 
@@ -38,7 +38,7 @@ A secure Magento 2 extension that allows authorized Admin users to log in as cus
 
 ---
 
-## 🚀 Installation
+## Installation
 
 1. Copy the module to Magento:
 
@@ -57,7 +57,7 @@ php bin/magento setup:static-content:deploy
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
 
@@ -72,7 +72,7 @@ Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
 
 ---
 
-## 👥 Permissions Setup
+## Permissions Setup
 
 ### Grant Permissions to Admin Role
 
@@ -88,7 +88,7 @@ Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
 
 ---
 
-## 📘 Usage Guide
+## Usage Guide
 
 ### Method 1: From Customer Grid (Quick Access)
 
@@ -151,9 +151,9 @@ The module intelligently detects available websites:
 
 ---
 
-## 🔍 Security Considerations
+## Security Considerations
 
-### ✅ What We Do
+### What We Do
 
 1. **Token Generation:** Cryptographically secure `random_bytes(32)` = 64 hex chars
 2. **Token Storage:** Store SHA-256 hash only (64 chars), original token discarded after URL generation
@@ -173,7 +173,7 @@ The module intelligently detects available websites:
 8. **Session Regeneration:** Customer session ID regenerated after login
 9. **No Password Exposure:** Customer password hash never accessed
 
-### ⚠️ Potential Risks
+### Potential Risks
 
 1. **Social Engineering:** Admin with malicious intent could abuse access
    - **Mitigation:** Audit log provides full traceability, restrict ACL to trusted admins only
@@ -182,7 +182,7 @@ The module intelligently detects available websites:
 3. **Admin Session Hijacking:** If admin session compromised, attacker could generate tokens
    - **Mitigation:** Enforce admin 2FA, IP whitelisting, regular session timeout
 
-### 🚫 What We DON'T Do
+### What We DON'T Do
 
 ❌ No customer password access  
 ❌ No plaintext token storage  
@@ -193,7 +193,7 @@ The module intelligently detects available websites:
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: "Login as Customer" button not visible
 
@@ -234,7 +234,7 @@ Grant `Ashokkumar_LoginAsCustomer::login_action` permission to admin role
 
 ---
 
-## 🔧 Magento CLI Commands
+## Magento CLI Commands
 
 ```bash
 # Enable module
@@ -258,8 +258,8 @@ bin/magento module:disable Ashokkumar_LoginAsCustomer
 
 ---
 
-## 📞 Support
-🌐 Multi-Website Implementation
+## Support
+- Multi-Website Implementation
 
 ### How It Works
 
