@@ -80,10 +80,10 @@ Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
 2. Edit the desired role
 3. Under **Role Resources**, expand **Customers**
 4. Check:
-   - ✅ **Login as Customer > Perform Login as Customer Action**
-   - ✅ **Login as Customer > View Audit Log**
+   - **Login as Customer > Perform Login as Customer Action**
+   - **Login as Customer > View Audit Log**
 5. Under **Stores > Configuration**, check:
-   - ✅ **Login as Customer Configuration**
+   - **Login as Customer Configuration**
 6. Save Role
 
 ---
@@ -121,7 +121,7 @@ Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
 **Multi-Website Customer:**
 1. Navigate to: **Customers > All Customers**
 2. Click **Edit** on a customer
-3. Click **Login as Customer ▼** dropdown button in header
+3. Click **Login as Customer** dropdown button in header
 4. Select the desired website from dropdown:
    - Default
    - Wholesale
@@ -184,12 +184,12 @@ The module intelligently detects available websites:
 
 ### What We DON'T Do
 
-❌ No customer password access  
-❌ No plaintext token storage  
-❌ No unlimited token lifetime  
-❌ No token reuse  
-❌ No bypass of ACL permissions  
-❌ No modification of customer data during login  
+- No customer password access  
+- No plaintext token storage  
+- No unlimited token lifetime  
+- No token reuse  
+- No bypass of ACL permissions  
+- No modification of customer data during login  
 
 ---
 
