@@ -12,29 +12,29 @@ A secure Magento 2 extension that allows authorized Admin users to log in as cus
 
 ### Key Features
 
-✅ **Multi-Website Support** - Login as customer on any website (Ashokkumar, Coverion, etc.)  
-✅ **Smart Button Detection** - Automatically shows single button or dropdown based on available websites  
-✅ **Grid & Edit Page Access** - Login from customer grid or edit page  
-✅ **Cryptographically Secure** - Token-based authentication with SHA-256 hashing  
-✅ **Complete Audit Trail** - Track every login attempt with full details  
-✅ **ACL Protected** - Granular permission control  
-✅ **One-Time Tokens** - Prevents replay attacks  
-✅ **Configurable Expiry** - Default 5-minute token lifetime
+- **Multi-Website Support** - Login as customer on any website (Ashokkumar, Coverion, etc.)  
+- **Smart Button Detection** - Automatically shows single button or dropdown based on available websites  
+- **Grid & Edit Page Access** - Login from customer grid or edit page  
+- **Cryptographically Secure** - Token-based authentication with SHA-256 hashing  
+- **Complete Audit Trail** - Track every login attempt with full details  
+- **ACL Protected** - Granular permission control  
+- **One-Time Tokens** - Prevents replay attacks  
+- **Configurable Expiry** - Default 5-minute token lifetime
 
 ---
 
 ## Security Features
 
-✅ **Cryptographically Secure Tokens** - Uses `random_bytes(32)` for token generation  
-✅ **SHA-256 Hash Storage** - Tokens stored as hashes, never plaintext  
-✅ **Single-Use Tokens** - Automatically invalidated after first use  
-✅ **Configurable Expiry** - Default 5 minutes, prevents stale tokens  
-✅ **ACL Protected** - Dual permissions for login action and audit access  
-✅ **Complete Audit Trail** - Logs every attempt with admin/customer/IP/timestamp  
-✅ **CSRF Protection** - Leverages Magento's form key validation  
-✅ **No Password Access** - Bypasses password, uses session-based login  
-✅ **IP Tracking** - Records admin IP for forensics  
-✅ **Replay Prevention** - Hash comparison prevents token reuse  
+- **Cryptographically Secure Tokens** - Uses `random_bytes(32)` for token generation  
+- **SHA-256 Hash Storage** - Tokens stored as hashes, never plaintext  
+- **Single-Use Tokens** - Automatically invalidated after first use  
+- **Configurable Expiry** - Default 5 minutes, prevents stale tokens  
+- **ACL Protected** - Dual permissions for login action and audit access  
+- **Complete Audit Trail** - Logs every attempt with admin/customer/IP/timestamp  
+- **CSRF Protection** - Leverages Magento's form key validation  
+- **No Password Access** - Bypasses password, uses session-based login  
+- **IP Tracking** - Records admin IP for forensics  
+- **Replay Prevention** - Hash comparison prevents token reuse  
 
 ---
 
