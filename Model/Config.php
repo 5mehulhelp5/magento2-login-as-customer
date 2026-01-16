@@ -2,12 +2,12 @@
 /**
  * Configuration Provider
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Model;
+namespace Ashokdubariya\LoginAsCustomer\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
@@ -22,10 +22,10 @@ class Config
     /**
      * Configuration paths
      */
-    private const XML_PATH_ENABLED = 'ashokkumar_loginascustomer/general/enabled';
-    private const XML_PATH_TOKEN_LIFETIME = 'ashokkumar_loginascustomer/general/token_lifetime';
-    private const XML_PATH_REDIRECT_PAGE = 'ashokkumar_loginascustomer/general/redirect_page';
-    private const XML_PATH_AUDIT_ENABLED = 'ashokkumar_loginascustomer/general/audit_enabled';
+    private const XML_PATH_ENABLED = 'ashokdubariya_loginascustomer/general/enabled';
+    private const XML_PATH_TOKEN_LIFETIME = 'ashokdubariya_loginascustomer/general/token_lifetime';
+    private const XML_PATH_REDIRECT_PAGE = 'ashokdubariya_loginascustomer/general/redirect_page';
+    private const XML_PATH_AUDIT_ENABLED = 'ashokdubariya_loginascustomer/general/audit_enabled';
 
     /**
      * Default values

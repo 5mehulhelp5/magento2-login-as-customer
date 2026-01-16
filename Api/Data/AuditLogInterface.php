@@ -2,12 +2,12 @@
 /**
  * Audit Log Data Interface
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Api\Data;
+namespace Ashokdubariya\LoginAsCustomer\Api\Data;
 
 /**
  * Interface AuditLogInterface

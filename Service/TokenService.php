@@ -2,12 +2,12 @@
 /**
  * Token Service - Core Security Component
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Service;
+namespace Ashokdubariya\LoginAsCustomer\Service;
 
 use Magento\Backend\Model\Auth\Session as AdminSession;
 use Magento\Customer\Api\CustomerRepositoryInterface;
@@ -16,11 +16,11 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\HTTP\PhpEnvironment\RemoteAddress;
 use Magento\Framework\Stdlib\DateTime\DateTime;
 use Magento\Store\Model\StoreManagerInterface;
-use Ashokkumar\LoginAsCustomer\Api\Data\AuditLogInterface;
-use Ashokkumar\LoginAsCustomer\Model\AuditLog;
-use Ashokkumar\LoginAsCustomer\Model\AuditLogFactory;
-use Ashokkumar\LoginAsCustomer\Model\Config;
-use Ashokkumar\LoginAsCustomer\Model\ResourceModel\AuditLog as AuditLogResource;
+use Ashokdubariya\LoginAsCustomer\Api\Data\AuditLogInterface;
+use Ashokdubariya\LoginAsCustomer\Model\AuditLog;
+use Ashokdubariya\LoginAsCustomer\Model\AuditLogFactory;
+use Ashokdubariya\LoginAsCustomer\Model\Config;
+use Ashokdubariya\LoginAsCustomer\Model\ResourceModel\AuditLog as AuditLogResource;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -191,7 +191,7 @@ class TokenService
     {
         $tokenHash = hash('sha256', $token);
 
-        /** @var \Ashokkumar\LoginAsCustomer\Model\ResourceModel\AuditLog\Collection $collection */
+        /** @var \Ashokdubariya\LoginAsCustomer\Model\ResourceModel\AuditLog\Collection $collection */
         $collection = $this->auditLogFactory->create()->getCollection();
         $collection->addFieldToFilter('token_hash', $tokenHash)
             ->addFieldToFilter('status', AuditLog::STATUS_PENDING)

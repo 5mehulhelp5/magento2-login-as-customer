@@ -2,18 +2,18 @@
 /**
  * Customer Grid Actions Plugin
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Plugin;
+namespace Ashokdubariya\LoginAsCustomer\Plugin;
 
 use Magento\Customer\Ui\Component\Listing\Column\Actions as CustomerActions;
 use Magento\Framework\AuthorizationInterface;
 use Magento\Framework\UrlInterface;
 use Magento\Store\Model\StoreManagerInterface;
-use Ashokkumar\LoginAsCustomer\Model\Config;
+use Ashokdubariya\LoginAsCustomer\Model\Config;
 
 /**
  * Class CustomerGridActionsPlugin
@@ -75,7 +75,7 @@ class CustomerGridActionsPlugin
     ) {
         // Check if module is enabled and user has permission
         if (!$this->config->isEnabled() || 
-            !$this->authorization->isAllowed('Ashokkumar_LoginAsCustomer::login_action')) {
+            !$this->authorization->isAllowed('Ashokdubariya_LoginAsCustomer::login_action')) {
             return $result;
         }
 

@@ -3,8 +3,8 @@
 /**
  * ACL Configuration - Access Control List
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,13 +13,13 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Magento_Customer::customer" title="Customers" sortOrder="40">
-                    <resource id="Ashokkumar_LoginAsCustomer::login_as_customer"
+                    <resource id="Ashokdubariya_LoginAsCustomer::login_as_customer"
                               title="Login as Customer"
                               sortOrder="900">
-                        <resource id="Ashokkumar_LoginAsCustomer::login_action"
+                        <resource id="Ashokdubariya_LoginAsCustomer::login_action"
                                   title="Perform Login as Customer Action"
                                   sortOrder="10"/>
-                        <resource id="Ashokkumar_LoginAsCustomer::audit_log"
+                        <resource id="Ashokdubariya_LoginAsCustomer::audit_log"
                                   title="View Audit Log"
                                   sortOrder="20"/>
                     </resource>
@@ -27,7 +27,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Ashokkumar_LoginAsCustomer::config"
+                            <resource id="Ashokdubariya_LoginAsCustomer::config"
                                       title="Login as Customer Configuration"/>
                         </resource>
                     </resource>

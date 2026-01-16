@@ -3,20 +3,20 @@
 /**
  * Default Configuration Values
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <ashokkumar_loginascustomer>
+        <ashokdubariya_loginascustomer>
             <general>
                 <enabled>1</enabled>
                 <token_lifetime>5</token_lifetime>
                 <redirect_page>customer/account</redirect_page>
                 <audit_enabled>1</audit_enabled>
             </general>
-        </ashokkumar_loginascustomer>
+        </ashokdubariya_loginascustomer>
     </default>
 </config>

@@ -2,15 +2,15 @@
 /**
  * Status Source Model
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Model\Source;
+namespace Ashokdubariya\LoginAsCustomer\Model\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
-use Ashokkumar\LoginAsCustomer\Model\AuditLog;
+use Ashokdubariya\LoginAsCustomer\Model\AuditLog;
 
 /**
  * Class Status

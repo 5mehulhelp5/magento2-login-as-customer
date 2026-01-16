@@ -3,8 +3,8 @@
 /**
  * Audit Log Page Layout
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12,7 +12,7 @@
     <update handle="styles"/>
     <body>
         <referenceContainer name="content">
-            <uiComponent name="ashokkumar_loginascustomer_audit_log_listing"/>
+            <uiComponent name="ashokdubariya_loginascustomer_audit_log_listing"/>
         </referenceContainer>
     </body>
 </page>

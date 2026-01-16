@@ -2,12 +2,12 @@
 /**
  * Admin Controller - Audit Log Grid
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Controller\Adminhtml\Audit;
+namespace Ashokdubariya\LoginAsCustomer\Controller\Adminhtml\Audit;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -25,7 +25,7 @@ class Index extends Action implements HttpGetActionInterface
     /**
      * Authorization level constant
      */
-    const ADMIN_RESOURCE = 'Ashokkumar_LoginAsCustomer::audit_log';
+    const ADMIN_RESOURCE = 'Ashokdubariya_LoginAsCustomer::audit_log';
 
     /**
      * @var PageFactory
@@ -53,8 +53,8 @@ class Index extends Action implements HttpGetActionInterface
     {
         /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Ashokkumar_LoginAsCustomer::audit_log');
-        $resultPage->getConfig()->getTitle()->prepend(__('Login as Customer - Admin Login Log'));
+        $resultPage->setActiveMenu('Ashokdubariya_LoginAsCustomer::audit_log');
+        $resultPage->getConfig()->getTitle()->prepend(__('Login as Customer - Audit Log'));
 
         return $resultPage;
     }

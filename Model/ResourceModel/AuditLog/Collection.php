@@ -2,16 +2,16 @@
 /**
  * Audit Log Collection
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Model\ResourceModel\AuditLog;
+namespace Ashokdubariya\LoginAsCustomer\Model\ResourceModel\AuditLog;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
-use Ashokkumar\LoginAsCustomer\Model\AuditLog;
-use Ashokkumar\LoginAsCustomer\Model\ResourceModel\AuditLog as AuditLogResource;
+use Ashokdubariya\LoginAsCustomer\Model\AuditLog;
+use Ashokdubariya\LoginAsCustomer\Model\ResourceModel\AuditLog as AuditLogResource;
 
 /**
  * Class Collection

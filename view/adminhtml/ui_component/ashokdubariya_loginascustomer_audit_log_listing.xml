@@ -3,8 +3,8 @@
 /**
  * Audit Log UI Component Grid
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 -->
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12,7 +12,7 @@
     
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">ashokkumar_loginascustomer_audit_log_listing.ashokkumar_loginascustomer_audit_log_listing_data_source</item>
+            <item name="provider" xsi:type="string">ashokdubariya_loginascustomer_audit_log_listing.ashokdubariya_loginascustomer_audit_log_listing_data_source</item>
         </item>
     </argument>
     
@@ -24,21 +24,21 @@
                 <label translate="true">Refresh</label>
             </button>
         </buttons> -->
-        <spinner>ashokkumar_loginascustomer_audit_log_columns</spinner>
+        <spinner>ashokdubariya_loginascustomer_audit_log_columns</spinner>
         <deps>
-            <dep>ashokkumar_loginascustomer_audit_log_listing.ashokkumar_loginascustomer_audit_log_listing_data_source</dep>
+            <dep>ashokdubariya_loginascustomer_audit_log_listing.ashokdubariya_loginascustomer_audit_log_listing_data_source</dep>
         </deps>
     </settings>
     
-    <dataSource name="ashokkumar_loginascustomer_audit_log_listing_data_source" component="Magento_Ui/js/grid/provider">
+    <dataSource name="ashokdubariya_loginascustomer_audit_log_listing_data_source" component="Magento_Ui/js/grid/provider">
         <settings>
             <storageConfig>
                 <param name="indexField" xsi:type="string">entity_id</param>
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Ashokkumar_LoginAsCustomer::audit_log</aclResource>
-        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="ashokkumar_loginascustomer_audit_log_listing_data_source">
+        <aclResource>Ashokdubariya_LoginAsCustomer::audit_log</aclResource>
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="ashokdubariya_loginascustomer_audit_log_listing_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
                 <primaryFieldName>entity_id</primaryFieldName>
@@ -71,7 +71,7 @@
         <paging name="listing_paging"/>
     </listingToolbar>
     
-    <columns name="ashokkumar_loginascustomer_audit_log_columns">
+    <columns name="ashokdubariya_loginascustomer_audit_log_columns">
         
         <column name="entity_id" sortOrder="10">
             <settings>
@@ -118,7 +118,7 @@
         
         <column name="status" component="Magento_Ui/js/grid/columns/select" sortOrder="70">
             <settings>
-                <options class="Ashokkumar\LoginAsCustomer\Model\Source\Status"/>
+                <options class="Ashokdubariya\LoginAsCustomer\Model\Source\Status"/>
                 <filter>select</filter>
                 <dataType>select</dataType>
                 <label translate="true">Status</label>

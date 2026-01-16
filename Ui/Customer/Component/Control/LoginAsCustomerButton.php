@@ -2,12 +2,12 @@
 /**
  * Login as Customer Button UI Component
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Ui\Customer\Component\Control;
+namespace Ashokdubariya\LoginAsCustomer\Ui\Customer\Component\Control;
 
 use Magento\Backend\Block\Widget\Context;
 use Magento\Customer\Api\CustomerRepositoryInterface;
@@ -19,7 +19,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 use Magento\Store\Model\StoreManagerInterface;
-use Ashokkumar\LoginAsCustomer\Model\Config;
+use Ashokdubariya\LoginAsCustomer\Model\Config;
 
 /**
  * Login as Customer button with multi-website support
@@ -83,7 +83,7 @@ class LoginAsCustomerButton extends GenericButton implements ButtonProviderInter
         $customerId = (int)$this->getCustomerId();
         $data = [];
 
-        $isAllowed = $customerId && $this->authorization->isAllowed('Ashokkumar_LoginAsCustomer::login_action');
+        $isAllowed = $customerId && $this->authorization->isAllowed('Ashokdubariya_LoginAsCustomer::login_action');
         $isEnabled = $this->config->isEnabled();
 
         if ($isAllowed && $isEnabled) {

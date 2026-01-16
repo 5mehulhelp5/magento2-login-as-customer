@@ -2,21 +2,21 @@
 /**
  * Frontend Controller - Process Customer Login
  * 
- * @category Ashokkumar
- * @package Ashokkumar_LoginAsCustomer
+ * @category Ashokdubariya
+ * @package Ashokdubariya_LoginAsCustomer
  */
 
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Controller\Login;
+namespace Ashokdubariya\LoginAsCustomer\Controller\Login;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\Redirect;
 use Magento\Framework\Controller\ResultFactory;
-use Ashokkumar\LoginAsCustomer\Model\Config;
-use Ashokkumar\LoginAsCustomer\Service\CustomerLoginService;
-use Ashokkumar\LoginAsCustomer\Service\TokenService;
+use Ashokdubariya\LoginAsCustomer\Model\Config;
+use Ashokdubariya\LoginAsCustomer\Service\CustomerLoginService;
+use Ashokdubariya\LoginAsCustomer\Service\TokenService;
 use Psr\Log\LoggerInterface;
 
 class Process extends Action

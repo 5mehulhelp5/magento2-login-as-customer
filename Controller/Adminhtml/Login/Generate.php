@@ -2,28 +2,28 @@
 /**
  * Admin Controller - Generate Login Token
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Controller\Adminhtml\Login;
+namespace Ashokdubariya\LoginAsCustomer\Controller\Adminhtml\Login;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Controller\Result\Redirect;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Store\Model\StoreManagerInterface;
-use Ashokkumar\LoginAsCustomer\Model\Config;
-use Ashokkumar\LoginAsCustomer\Service\TokenService;
+use Ashokdubariya\LoginAsCustomer\Model\Config;
+use Ashokdubariya\LoginAsCustomer\Service\TokenService;
 
 class Generate extends Action
 {
     /**
      * ACL resource
      */
-    const ADMIN_RESOURCE = 'Ashokkumar_LoginAsCustomer::login_action';
+    const ADMIN_RESOURCE = 'Ashokdubariya_LoginAsCustomer::login_action';
 
     private $tokenService;
     private $config;

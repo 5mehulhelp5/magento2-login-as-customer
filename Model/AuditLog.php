@@ -2,15 +2,15 @@
 /**
  * Audit Log Model
  *
- * @category  Ashokkumar
- * @package   Ashokkumar_LoginAsCustomer
+ * @category  Ashokdubariya
+ * @package   Ashokdubariya_LoginAsCustomer
  */
 declare(strict_types=1);
 
-namespace Ashokkumar\LoginAsCustomer\Model;
+namespace Ashokdubariya\LoginAsCustomer\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Ashokkumar\LoginAsCustomer\Api\Data\AuditLogInterface;
+use Ashokdubariya\LoginAsCustomer\Api\Data\AuditLogInterface;
 
 /**
  * Class AuditLog
@@ -22,7 +22,7 @@ class AuditLog extends AbstractModel implements AuditLogInterface
     /**
      * Cache tag constant
      */
-    const CACHE_TAG = 'ashokkumar_login_as_customer_log';
+    const CACHE_TAG = 'ashokdubariya_login_as_customer_log';
 
     /**
      * Status constants
@@ -40,7 +40,7 @@ class AuditLog extends AbstractModel implements AuditLogInterface
     /**
      * @var string
      */
-    protected $_eventPrefix = 'ashokkumar_login_as_customer_log';
+    protected $_eventPrefix = 'ashokdubariya_login_as_customer_log';
 
     /**
      * Initialize resource model
@@ -49,7 +49,7 @@ class AuditLog extends AbstractModel implements AuditLogInterface
      */
     protected function _construct()
     {
-        $this->_init(\Ashokkumar\LoginAsCustomer\Model\ResourceModel\AuditLog::class);
+        $this->_init(\Ashokdubariya\LoginAsCustomer\Model\ResourceModel\AuditLog::class);
     }
 
     /**

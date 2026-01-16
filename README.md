@@ -1,18 +1,10 @@
-# Magento 2 LoginAsCustomer Module
+# Magento 2 Login as Customer Module
 
-## Module Overview
+This repository contains a **Login as Customer** module that allows authorized Admin users to log in as customers from the Admin Panel with **multi-website support** and full audit traceability.
 
-A secure Magento 2 extension that allows authorized Admin users to log in as customers from the Admin Panel with **multi-website support** and full audit traceability.
+## Key Features
 
-**Module Name:** `Ashokkumar_LoginAsCustomer`  
-**Version:** 1.0.0  
-**Magento:** 2.4.4+  
-**PHP:** 8.1+  
-**License:** Proprietary
-
-### Key Features
-
-- **Multi-Website Support** - Login as customer on any website (Ashokkumar, Coverion, etc.)  
+- **Multi-Website Support** - Login as customer on any website (Ashokdubariya, Coverion, etc.)  
 - **Smart Button Detection** - Automatically shows single button or dropdown based on available websites  
 - **Grid & Edit Page Access** - Login from customer grid or edit page  
 - **Cryptographically Secure** - Token-based authentication with SHA-256 hashing  
@@ -20,8 +12,6 @@ A secure Magento 2 extension that allows authorized Admin users to log in as cus
 - **ACL Protected** - Granular permission control  
 - **One-Time Tokens** - Prevents replay attacks  
 - **Configurable Expiry** - Default 5-minute token lifetime
-
----
 
 ## Security Features
 
@@ -36,30 +26,52 @@ A secure Magento 2 extension that allows authorized Admin users to log in as cus
 - **IP Tracking** - Records admin IP for forensics  
 - **Replay Prevention** - Hash comparison prevents token reuse  
 
----
+## Requirements
+
+- Magento Open Source **2.4.4+**
+- PHP **8.1+**
+
+## Module Information
+
+- **Module Name:** `Ashokdubariya_LoginAsCustomer`
+- **Package Name:** `ashokdubariya/module-login-as-customer`
+- **Module Type:** Magento 2 Custom Module
+- **License:** MIT
 
 ## Installation
 
+### Method 1: Composer Installation (Recommended)
+
+```bash
+composer require ashokdubariya/module-login-as-customer
+php bin/magento module:enable Ashokdubariya_LoginAsCustomer
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy -f
+php bin/magento cache:flush
+```
+### Method 2: Manual Installation
+
 1. Copy the module to Magento:
 
-```
-app/code/Ashokkumar/LoginAsCustomer
+```bash
+mkdir -p app/code/Ashokdubariya/LoginAsCustomer
+# Copy module files to app/code/Ashokdubariya/LoginAsCustomer
 ```
 
 2. Run Magento commands:
 
 ```bash
+php bin/magento module:enable Ashokdubariya_LoginAsCustomer
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy -f
 php bin/magento cache:flush
-php bin/magento setup:static-content:deploy
 ```
-
----
 
 ## Configuration
 
-Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
+Navigate to: **Stores > Configuration > Ashokdubariya > Login as Customer**
 
 ### Settings
 
@@ -69,8 +81,6 @@ Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
 | **Token Lifetime (minutes)** | How long token remains valid | 5 |
 | **Redirect Page After Login** | URL path after login | `customer/account` |
 | **Enable Audit Logging** | Log all attempts | Yes |
-
----
 
 ## Permissions Setup
 
@@ -85,8 +95,6 @@ Navigate to: **Stores > Configuration > Ashokkumar > Login as Customer**
 5. Under **Stores > Configuration**, check:
    - **Login as Customer Configuration**
 6. Save Role
-
----
 
 ## Usage Guide
 
@@ -138,7 +146,7 @@ The module intelligently detects available websites:
 
 ### Viewing Audit Log
 
-1. Navigate to: **Customers > Login as Customer - Audit Log**
+1. Navigate to: **Customers > Login as Customer**
 2. View grid with columns:
    - Log ID
    - Admin ID / Username
@@ -149,15 +157,13 @@ The module intelligently detects available websites:
    - Created At / Expires At / Used At
 3. Use filters to search by admin, customer, status, date range
 
----
-
 ## Security Considerations
 
 ### What We Do
 
 1. **Token Generation:** Cryptographically secure `random_bytes(32)` = 64 hex chars
 2. **Token Storage:** Store SHA-256 hash only (64 chars), original token discarded after URL generation
-3. **Single-Use:** Token status changed from `pending` > `success` after first use, subsequent attempts rejected
+3. **Single-Use:** Token status changed from `pending` → `success` after first use, subsequent attempts rejected
 4. **Expiration:** Configurable TTL (default 5 min), server-side timestamp validation
 5. **Audit Logging:** Every attempt logged with:
    - Admin ID/username
@@ -173,16 +179,7 @@ The module intelligently detects available websites:
 8. **Session Regeneration:** Customer session ID regenerated after login
 9. **No Password Exposure:** Customer password hash never accessed
 
-### Potential Risks
-
-1. **Social Engineering:** Admin with malicious intent could abuse access
-   - **Mitigation:** Audit log provides full traceability, restrict ACL to trusted admins only
-2. **Token Interception:** If HTTPS not enforced, token could be intercepted
-   - **Mitigation:** Always use HTTPS, short expiry window (5 min)
-3. **Admin Session Hijacking:** If admin session compromised, attacker could generate tokens
-   - **Mitigation:** Enforce admin 2FA, IP whitelisting, regular session timeout
-
-### What We DON'T Do
+### What We Don't Do
 
 - No customer password access  
 - No plaintext token storage  
@@ -191,106 +188,21 @@ The module intelligently detects available websites:
 - No bypass of ACL permissions  
 - No modification of customer data during login  
 
----
+### Technical Details
 
-## Troubleshooting
-
-### Issue: "Login as Customer" button not visible
-
-**Causes:**
-1. Module not enabled in config
-2. Admin role lacks permission
-3. Cache not cleared
-
-**Solution:**
-```bash
-bin/magento config:set ashokkumar_loginascustomer/general/enabled 1
-bin/magento cache:flush
-```
-
-### Issue: Token expired error
-
-**Cause:** Token lifetime too short or clock skew
-
-**Solution:**
-Increase token lifetime in config (e.g., 10 minutes)
-
-### Issue: Audit log grid empty
-
-**Cause:** Database table not created
-
-**Solution:**
-```bash
-bin/magento setup:upgrade
-bin/magento indexer:reindex
-```
-
-### Issue: Permission denied
-
-**Cause:** Admin role not configured
-
-**Solution:**
-Grant `Ashokkumar_LoginAsCustomer::login_action` permission to admin role
-
----
-
-## Magento CLI Commands
-
-```bash
-# Enable module
-bin/magento module:enable Ashokkumar_LoginAsCustomer
-
-# Run setup
-bin/magento setup:upgrade
-
-# Compile DI
-bin/magento setup:di:compile
-
-# Clear cache
-bin/magento cache:clean
-
-# Check module status
-bin/magento module:status Ashokkumar_LoginAsCustomer
-
-# Disable module (if needed)
-bin/magento module:disable Ashokkumar_LoginAsCustomer
-```
-
----
+1. Detects customer's primary website ID
+2. Checks customer sharing configuration
+3. Retrieves all accessible websites
+4. Generates appropriate UI (single/multiple actions)
+5. Passes `website_id` parameter to controller
+6. Controller selects correct store based on website
+7. Redirects to appropriate website base URL
 
 ## Support
-- Multi-Website Implementation
 
-### How It Works
+- **Source**: [GitHub Repository](https://github.com/ashokdubariya/magento2-login-as-customer)
+- **Issues**: [GitHub Issues](https://github.com/ashokdubariya/magento2-login-as-customer/issues)
 
-The module automatically detects whether a customer can access multiple websites and adapts the UI accordingly:
+## License
 
-**Customer Grid:**
-- Single website > One "Login as Customer" action
-- Multiple websites > Multiple "Login as Customer (Website Name)" actions
-
-**Customer Edit Page:**
-- Single website > Simple button
-- Multiple websites > Dropdown button with website options
-
-### Configuration
-
-Check customer account sharing scope:
-```bash
-php bin/magento config:show customer/account_share/scope
-```
-
-- `0` = Global (customers can access all websites)
-- `1` = Per Website (customers limited to assigned website)
-
-### Example Scenarios
-
-**Scenario 1: Customer on Default website only**
-- Grid: Shows "Login as Customer"
-- Edit: Shows simple button
-- Logs into Default website
-
-**Scenario 2: Customer on multiple websites (Global sharing)**
-- Grid: Shows "Login as Customer (Default)", "Login as Customer (Wholesale)"
-- Edit: Shows dropdown with website options
-- Admin selects which website to login to
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
