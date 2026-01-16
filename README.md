@@ -44,7 +44,6 @@ This repository contains a **Login as Customer** module that allows authorized A
 
 ```bash
 composer require ashokdubariya/module-login-as-customer
-php bin/magento module:enable Ashokdubariya_LoginAsCustomer
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy -f
@@ -62,7 +61,6 @@ mkdir -p app/code/Ashokdubariya/LoginAsCustomer
 2. Run Magento commands:
 
 ```bash
-php bin/magento module:enable Ashokdubariya_LoginAsCustomer
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy -f
@@ -79,7 +77,7 @@ Navigate to: **Stores > Configuration > Ashokdubariya > Login as Customer**
 |---------|-------------|---------|
 | **Enable Module** | Enable/Disable functionality | Yes |
 | **Token Lifetime (minutes)** | How long token remains valid | 5 |
-| **Redirect Page After Login** | URL path after login | `customer/account` |
+| **Redirect Page After Login** | URL path after login | customer/account |
 | **Enable Audit Logging** | Log all attempts | Yes |
 
 ## Permissions Setup
@@ -159,7 +157,7 @@ The module intelligently detects available websites:
 
 ## Security Considerations
 
-### What We Do
+### What we do?
 
 1. **Token Generation:** Cryptographically secure `random_bytes(32)` = 64 hex chars
 2. **Token Storage:** Store SHA-256 hash only (64 chars), original token discarded after URL generation
@@ -179,7 +177,7 @@ The module intelligently detects available websites:
 8. **Session Regeneration:** Customer session ID regenerated after login
 9. **No Password Exposure:** Customer password hash never accessed
 
-### What We Don't Do
+### What we don't do?
 
 - No customer password access  
 - No plaintext token storage  
